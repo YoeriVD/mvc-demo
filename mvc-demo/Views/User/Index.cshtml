@@ -1,0 +1,11 @@
+﻿@using Newtonsoft.Json
+@model mvc_demo.Controllers.User
+
+<div class="alert alert-danger">@Html.ValidationSummary(true)</div>
+
+
+
+@Html.ValidationMessageFor(m => m.Name)
+@Html.ValidationMessageFor(m => m.Location)
+
+@JsonConvert.SerializeObject(Model)
