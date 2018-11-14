@@ -1,4 +1,8 @@
-﻿using mvc_demo;
+﻿using System.Web.Mvc;
+using System.Web.Optimization;
+using System.Web.Routing;
+using mvc_demo;
+using mvc_demo.Controllers;
 using Microsoft.Owin;
 using Owin;
 
@@ -9,8 +13,14 @@ namespace mvc_demo
     {
         public void Configuration(IAppBuilder app)
         {
+            
+            //AreaRegistration.RegisterAllAreas();
+            ModelBinders.Binders.Add(typeof(LoggedInUser), new LoggedInUserBinder());
             // New code:
-            app
+            FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
+            RouteConfig.RegisterRoutes(RouteTable.Routes);
+            BundleConfig.RegisterBundles(BundleTable.Bundles);
+            //ControllerBuilder.Current.SetControllerFactory(typeof(SjareltjeControllerFactory));
         }
     }
 }

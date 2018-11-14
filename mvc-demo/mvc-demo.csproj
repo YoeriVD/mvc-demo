@@ -127,9 +127,6 @@
     <Compile Include="Controllers\NewUserController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Controllers\YoeriController.cs" />
-    <Compile Include="Global.asax.cs">
-      <DependentUpon>Global.asax</DependentUpon>
-    </Compile>
     <Compile Include="LogPageRenderedIn.cs" />
     <Compile Include="MyHtmlHelpers.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -145,7 +142,6 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="favicon.ico" />
-    <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
